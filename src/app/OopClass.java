@@ -1,6 +1,6 @@
 package app;
 
-public class oop_class {
+public class OopClass {
 
 
 
@@ -223,7 +223,7 @@ public class oop_class {
         System.out.println(length*width);
     }
     public static void main(String args[]){
-        oop_class r1 = new oop_class(), r2 = new oop_class(); // tao hai doi TenPhuongThuc
+        OopClass r1 = new OopClass(), r2 = new OopClass(); // tao hai doi TenPhuongThuc
 
         r1.insert(11, 5);
         r2.insert(3, 15);

@@ -1,6 +1,6 @@
 package app;
 
-public class oop {
+public class Oop {
 
     /*
     Khái niệm hướng đối tượng (OOP) trong Java
@@ -33,7 +33,7 @@ public class oop {
     // }
 // vi du nay giai thich cach de truy cap bien instance va cac phuong thuc cua 1 lop.
     int Giaxe;
-    public oop(String ten){
+    public Oop(String ten){
         // Contructor nay co mot tham so la ten.
         System.out.println("Ten xe la : " + ten );
     
@@ -48,7 +48,7 @@ public class oop {
     }
     public static void main(String args[]){
         //tao doi tuong
-        oop Xecuatoi = new oop("Toyouta");
+        Oop Xecuatoi = new Oop("Toyouta");
         //goi mot phuong jthuc lop de thiet lap gia xe.
         Xecuatoi.setGia(10000000);
         // Goi mot phuong thuc lop de thiet lap gia xe.

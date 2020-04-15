@@ -137,33 +137,111 @@ public class oop_class {
     //     //Cung co the truy cap bien instance nhu sau:
     //     System.out.println("Gia tri bien: " + Xecuatoi.Giaxe);
     // }
-        //Ví dụ đối tượng và lớp mà duy trì bản ghi các sinh viên.
+    //     //Ví dụ đối tượng và lớp mà duy trì bản ghi các sinh viên.
+    // /*
+    // Trong ví dụ này, chúng ta tạo hai đối tượng của lớp Student và khởi
+    // tạo giá trị của các đối tượng này bằng việc triệu hồi phương thức insertRecord trên nó.
+    // Ở đây chúng ta đang hiển thị trạng thái (dữ liệu) của các đối tượng bằng
+    // việc triệu hồi phương thwucs displayInformation.
+    // */
+    // int rollno;
+    // String name;
+    // void insertRecord(int r, String n){
+    //     //Phuong thuc
+    //     rollno = r;
+    //     name = n;
+    // }
+    // void displayInformation(){
+    //     System.out.println(rollno + " " + name);//phuong thuc
+    // }
+    // public static void main(String args[]){
+    //     oop_class s1 = new oop_class();
+    //     oop_class s2 = new oop_class();
+
+    //     s1.insertRecord(111, "HoangThanh");
+    //     s2.insertRecord(222, "Thanh Huong");
+
+    //     s1.displayInformation();
+    //     s2.displayInformation();
+    // }
+
+    // //Ví dụ khác về lớp và đối tượng trong Java.
+    // //Ví dụ khác duy trì các bán ghi của lớp Rectangle. Phần giải thích tương tự như trên:
+    // int length;
+    // int width;
+    // void insert(int l, int w){
+    //     length = l;
+    //     width = w;
+    // }
+    // void calculateArea(){
+    //     System.out.println(length*width);
+    // }
+    // public static void main(String args[]){
+    //     oop_class r1 = new oop_class();
+    //     oop_class r2 = new oop_class();
+
+    //     r1.insert(11, 5);
+    //     r2.insert(3, 15);
+
+    //     r1.calculateArea();
+    //     r2.calculateArea();
+    // }
     /*
-    Trong ví dụ này, chúng ta tạo hai đối tượng của lớp Student và khởi
-    tạo giá trị của các đối tượng này bằng việc triệu hồi phương thức insertRecord trên nó.
-    Ở đây chúng ta đang hiển thị trạng thái (dữ liệu) của các đối tượng bằng
-    việc triệu hồi phương thwucs displayInformation.
+    Các cách khác nhau để tạo đối tượng trong Java? Có nhiều cách
+    đó là bằng từ khóa new; phương thức newinstance(); phương thức colne(); phương thứcfactory,..
+    
+    Đối tượng vô danh (annonymous) trong Java.
+    Vô danh hiểu đơn giản là không có tên. Một đối tượng mà không có tham chiếu thì được xem như 
+    là một đối tượng vô danh. Nếu bạn phải sử dụng một đối tượng hcir một lần,
+    thì đối tượng vô danh là một hướng tiếp cận tốt.
+    
     */
-    int rollno;
-    String name;
-    void insertRecord(int r, String n){
-        //Phuong thuc
-        rollno = r;
-        name = n;
+    // //Caculation
+    // void fact(int n){
+    //     int fact = 1;
+    //     for (int i = 1; i <= n; i++){
+    //         fact = fact * i;
+    //     }
+    //     System.out.println("factorial is " + fact);
+    // }
+    // public static void main(String args[]){
+    //     new oop_class().fact(5);  // goi phuong thuc voi doi tuong vo danh (annonymous.)
+    // }
+
+    //Tạo nhiều đối tượng bởi chỉ một kiểu
+    //chúng ta có thể tạo nhiều đối tượng chỉ bởi một kiểu như chúng ta thực hiện trong các kiểu gốc. Ví dụ:
+        //Rectangle r1 = new Rectangle(), r2 = new Retange(); /// Tao hai doi tượng
+    //ví dụ:
+    int length;
+    int width;
+    void insert(int l, int w){
+        length = l;
+        width = w;
     }
-    void displayInformation(){
-        System.out.println(rollno + " " + name);//phuong thuc
+    void caculateArea()
+    {
+        System.out.println(length*width);
     }
     public static void main(String args[]){
-        oop_class s1 = new oop_class();
-        oop_class s2 = new oop_class();
+        oop_class r1 = new oop_class(), r2 = new oop_class(); // tao hai doi TenPhuongThuc
 
-        s1.insertRecord(111, "HoangThanh");
-        s2.insertRecord(222, "Thanh Huong");
+        r1.insert(11, 5);
+        r2.insert(3, 15);
 
-        s1.displayInformation();
-        s2.displayInformation();
+        r1.caculateArea();
+        r2.caculateArea();
     }
+     
+
+
+
+
+
+
+
+
+
 
 
 }
+

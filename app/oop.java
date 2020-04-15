@@ -20,19 +20,7 @@ public class oop {
     
     vietJack.com
     */
-    // //cú pháp để khai báo một lớp:
-    // class ten_lop{
-    //     thanh_vien_du_lieu;
-    //     phuong_thuc;
-    // }
-    // //Ví dụ đơn giản về Lớp và Đối tượng  trong Java.
-    // int id; // thanh vien du lieu (cung la bien instance)
-    // String name;// thanh vien du lieu(cung la bien instance)
-    // public static void main(String args[]){
-    //     Student1 s1 - new Student1();   //tao mot doi tuong Student.
-    //     System.out.println(s1.id);
-    //     System.out.println(s1.name);
-    // }
+
     // // vi du ve tao mot doi tuong.
     // public oop(String ten){
     //     // Constructor nay co mot tham so la ten
@@ -67,8 +55,6 @@ public class oop {
         Xecuatoi.getGia();
         //truy cap bien instance :
         System.out.println("Gia tri bien: " + Xecuatoi.Giaxe);
-
-
     }
 
 

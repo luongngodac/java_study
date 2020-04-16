@@ -1,5 +1,5 @@
-
-public class PTGiaThua {
+package app;
+public class PTGiaiThua {
 
     /*
     Tính giai thừa trong Java.

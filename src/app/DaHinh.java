@@ -193,3 +193,4 @@ class BabyDog1 extends Dog1
 //Vì BabyDog1 không ghi đè phương thức eat(), do đó phương thức eat() 
 //của lớp Dog1() được triệu hồi, tương thự nếu Dog không ghi đè tiếp phương thức eat()
 //thì phương thức eat() của lớp Animal1 được triệu hồi.
+//vietJack.com han hanh tai tro chuong trinh nay:D

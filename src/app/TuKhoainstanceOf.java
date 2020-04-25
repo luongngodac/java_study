@@ -3,7 +3,7 @@ package app;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class TuKhoainstanceOf {
+public class TuKhoaInstanceOf {
     
 
     /**

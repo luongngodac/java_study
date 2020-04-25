@@ -29,6 +29,7 @@ public class Covariant extends A{
     kiểu trả về khác nhau và nó là ghi đè phương thức. Đây còn được biết 
     đến như là kiểu trả về covariant.
     */
+    //vietJack.com 
 }
 
 class A

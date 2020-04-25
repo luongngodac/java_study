@@ -106,16 +106,16 @@ public class TuKhoaFinal extends Bike
     
     //Câu hỏi: Tham số final là gì?
     //Nếu bạn khai báo bất cứ tham số nào là final, thì bạn không thể thay đổi giá trị của nó.
-    int cube(final int n)
-    {
-        n = n + 2;// khong the thay doi khi n la final.
-        n *n * n;
-    }
-    public static void main(String args[])
-    {
-        TuKhoaFinal b = new TuKhoaFinal();
-        b.cube(5);
-    }
+    // int cube(final int n)
+    // {
+    //     n = n + 2;// khong the thay doi khi n la final.
+    //     n *n * n;
+    // }
+    // public static void main(String args[])
+    // {
+    //     TuKhoaFinal b = new TuKhoaFinal();
+    //     b.cube(5);
+    // }
     //tất nhiên chương trình trên là lỗi vì có buil được đâu haha.
     //Cau hoi: Chúng ta có thể khai báo một constructor final không?
     //Trả lồi không bởi vì constructor không bao giờ được kế thừa.

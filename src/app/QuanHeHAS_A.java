@@ -29,19 +29,46 @@ public class QuanHeHAS_A {
     Chúng ta tạo tham chiếu của lớp Operation trong lớp Circle.
 
     */
-    Operation op;   // quan he HAS-A
-    double pi = 3.14;
-    double area (int radius)
+    // Operation op;   // quan he HAS-A
+    // double pi = 3.14;
+    // double area (int radius)
+    // {
+    //     op = new Operation();
+    //     int rsquare = op.square(radius);//tai su dung ode (vi du: uy quyen loi goi phuong thuc).
+    //     return pi*rsquare;
+    // }
+    // public static void main(String args[])
+    // {
+    //     QuanHeHAS_A q = new QuanHeHAS_A();
+    //     double result = q.area(5);
+    //     System.out.println(result);
+    // }
+    /*Ví dụ: Như trong ví dụ trên đã đề cập, Employee có một đối tượng là Address, 
+    đối tượng này chứa thông tin riêng như city, state, country,... Trong tình huống
+    này ,mối quan hệ là Empoyee HAS-A address*/
+    int id;
+    String name;
+    Address address;
+    public QuanHeHAS_A(int id, String name, Address address)
     {
-        op = new Operation();
-        int rsquare = op.square(radius);//tai su dung ode (vi du: uy quyen loi goi phuong thuc).
-        return pi*rsquare;
+        this.id = id;
+        this.name = name;
+        this.address = address;
     }
-    public static void main(String args[])
+    void display()
     {
-        QuanHeHAS_A q = new QuanHeHAS_A();
-        double result = q.area(5);
-        System.out.println(result);
+        System.out.println(id + " " + name);
+        System.out.println(address.city + " " + address.state + " " + address.country);
     }
+    public static void main(String[] args)
+    {
+        Address address1 = new Address("hanoi", "HN", "vietnam");
+        Address address2 = new Address("hadong", "HN", "vietnam");
 
+        QuanHeHAS_A e = new QuanHeHAS_A(111, "hoang", address1);
+        QuanHeHAS_A e2 = new QuanHeHAS_A(112, "thanh", address2);
+
+        e.display();
+        e2.display();
+    }
 }

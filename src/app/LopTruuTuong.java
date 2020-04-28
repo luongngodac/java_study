@@ -110,6 +110,12 @@ public class LopTruuTuong extends BikeT
     phải ghi đè tất cả phương thức của Interface đó.
     Ghi chú: nếu bạn mới học về Java thì học Interface trước và bỏ qua ví dụ này.
     https://vietjack.com/java/lop_abstract_trong_java.jsp
+    Ghi chú: Có thể hỏi về sự khác nhau giữa abstract class và interface. Các bạn nên
+    chú ý các phuong thức của interface là abstract 100%, trong abstract class có
+    thể có phương thức không phải abstract. Trong thiết kế phần mềm, interface
+    thường được dùng để chỉ 2 hay nhiều class cùng làm việc gì đó (ví dụ cùng in Printable)
+    trong khi abstract class thường hướng đến quan hệ cha con trong lập trình hướng đối tượng
+    có thể đọc thêm tại: 
     */
 
 

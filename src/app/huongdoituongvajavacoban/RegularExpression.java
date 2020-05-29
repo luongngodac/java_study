@@ -160,14 +160,9 @@ public class RegularExpression {
     }
 
     Các phương thức start và end trong Java
-    Ví dụ sau tính toán số lần mà từ "cats" xuất hiện trong chuỗi input.
-
-
-    
-    vietJack.com
-    */
-    private static final String REGEX = "\\bplay\\\b";
-    private static final String INPUT = "play play play football tennis day";
+    Ví dụ sau tính toán số lần mà từ "play" xuất hiện trong chuỗi input.
+    private static final String REGEX = "\\bplay\\b";
+    private static final String INPUT = "play play play football tennis play";
     public static void main(String[] args) {
         Pattern p = Pattern.compile(REGEX);
         Matcher m = p.matcher(INPUT);   // lay mot doi tuong matcher
@@ -179,6 +174,94 @@ public class RegularExpression {
             System.out.println("end(): " + m.end());
         }
     }
+
+    Bạn có thể thấy rằng ví dụ này sử dụng các giới hạn từ để đảm bảo rằng chữ cái "p" "l" "a" "y" không đơn thuần
+    là một chuỗi phụ trong một từ dài hơn. Nó cũng cung cấp một số thông tin hữu ích về nơi nào trong 
+    chuỗi input xuất hiện sự so khớp.
+    Phương thức start trả về chỉ mục bắt đầu của dãy phụ được nắm chặt bởi group đã cho trong hoạt động so khớp trước, 
+    và phương thức end trả về chỉ mục của ký tự cuối cùng được so khớp, cộng với 1.
+
+    Các phương thức matches và lookingAt trong Java
+    Ca hai phương thức matches và lookingAt so khớp một dãy input với một pattern. Tuy nhiên,
+    sự khác nhau ở đây là phương thức matches yêu cầu toàn bộ dãy input để được so khớp, trong khi 
+    phương thức lookingAt thì không.
+    Cả hai phương thức luôn luôn bắt đâu tại điểm bắt đầu của chuỗi input. Dưới đây là ví dụ:
+    private static final String REGEX = "it";
+    private static final String INPUT = "itttttttttttgaphot";
+    private static Pattern pattern;
+    private static Matcher matcher;
+    
+    public static void main(String[] args) {
+        pattern = Pattern.compile(REGEX);
+        matcher = pattern.matcher(INPUT);
+
+        System.out.println("REGEX hien tai la: " + REGEX);
+        System.out.println("INPUT hien tai la: " + INPUT);
+
+        System.out.println("lookingAt(): " + matcher.lookingAt());
+        System.out.println("matches(): " + matcher.matches());
+    }
+
+    Các phương thức replaceFirst và replaceAll trong Java
+    Các phương thức replaceFirst và replaceAll trong Java thay thế text mà
+    so khớp với một Regular Expression đã cho. Như tên của chúng ta đã cho biết, 
+    phương thức replaceFirst thay thế sự xuất hiện so khớp đầu tiên, trong khi phương thức
+    replaceAll thay thế tất cả so khớp.
+    Ví dụ:
+    private static String REGEX = "HaDong";
+    private static String INPUT = "HaDong o mien Tay." +
+        "HaDong la thanh pho cua BinhDuong";
+    private static String REPLACE = "BinhDuong";
+    
+    public static void main(String[] args) {
+        Pattern p = Pattern.compile(REGEX);
+        //lay mot doi tuong matcher
+        Matcher m = p.matcher(INPUT);
+        INPUT = m.replaceAll(REPLACE);
+        System.out.println(INPUT);
+    }
+
+    Các phương thức appendReplacement va appendTail trong Java
+    Lớp Matcher cũng cung cấp hai phương thức appendReplacement và appendTail để thay thế văn bản.
+    Ví dụ:
+    vietJack.com
+    */
+    private static String REGEX = "a*b";
+    private static String INPUT = "aabfooaabfooabfoob";
+    private static String REPLACE = "-";
+
+    public static void main(String[] args) {
+        Pattern p = Pattern.compile(REGEX);
+        //lay mot doi tuong matcher.
+        Matcher m = p.matcher(INPUT);
+        StringBuffer sb = new StringBuffer();
+        while(m.find()){
+            m.appendReplacement(sb, REPLACE);
+        }
+        m.appendTail(sb);
+        System.out.println(sb.toString());
+    }
+    /*
+    Các phương thức lớp PatternSyntaxException trong Java
+    Một lớp PatternSyntaxException là một exception chưa được kiểm tra mà chỉ dẫn 
+    lỗi cú pháp (syntax eror) trong một mẫu Regular Expression. Lớp PatternSyntaxException cung
+    cấp các phương thức sau để giúp bạn xác định cái gì gây ra lỗi.
+    Phương thức và miêu tả:
+    1.  public String getDescription()
+        Thu nhận sự miêu tả về lỗi.
+    2.  public int getIndex()
+        Thu nhận chỉ mục của lỗi
+    3.  public String getPattern()
+        Thu nhận mẫu Regular Expression sai sót.
+    4. public String getMessage()
+    Trả về một chuỗi nhiều dòng chứa sự mô tả về syntax eror và chỉ mục của nó, mẫu Regular Expression 
+    sai sót, và chỉ dẫn có thể nhìn thấy của chỉ mục lỗi trong pattern đó.
+    
+    */
+    
+
+    
+    
     
     
     
